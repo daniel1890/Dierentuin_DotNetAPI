@@ -42,5 +42,11 @@ namespace Dierentuin_DotNetAPI.Controllers
         {
             return Ok(_dierService.UpdateDier(updatedDier));
         }
+
+        [HttpDelete("id")]
+        public IActionResult DeleteDier(int id)
+        {
+            return Ok(_dierService.DeleteDier(id));
+        }
     }
 }

@@ -15,5 +15,7 @@ namespace Dierentuin_DotNetAPI.Services.Dieren
         List<Dier> AddDier(Dier newDier);
 
         Dier UpdateDier(Dier updatedDier);
+
+        List<Dier> DeleteDier(int id);
     }
 }

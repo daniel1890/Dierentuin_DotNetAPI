@@ -39,5 +39,12 @@ namespace Dierentuin_DotNetAPI.Services.Dieren
             dier.Soort = updatedDier.Soort;
             return updatedDier;
         }
+
+        public List<Dier> DeleteDier(int id)
+        {
+            Dier dier = _dieren.First(x => x.Id == id);
+            _dieren.Remove(dier);
+            return _dieren.Select(x => x).ToList();
+        }
     }
 }
